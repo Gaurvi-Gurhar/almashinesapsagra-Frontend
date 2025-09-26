@@ -10,3 +10,11 @@ function includeHTML(selector, file) {
 // Load navbar and footer
 includeHTML("#navbar", "components/navbar.html");
 includeHTML("#footer", "components/footer.html");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  toggleBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+});
